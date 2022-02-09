@@ -1,0 +1,150 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+}
+/*Flex*/
+.flex{
+    display: flex;
+    flex-direction: column;
+    
+}
+.nav{
+    margin: 2px;
+    padding: 2px;
+    text-decoration: none;
+    color: black;
+    background-color:darkkhaki;
+
+}
+.nav:hover{
+    color:blue;
+}
+.flexSect{
+    display: flex;
+    justify-content: space-between;
+}
+
+.gatos{
+    
+    width: 100%;
+    margin: 10px;
+    padding: 5px; 
+   
+}
+.perros{
+    width: 100%;
+    margin: 20px;
+}
+img{
+    border: solid 1px;
+    width:  80%;
+    height: 80%;
+}
+
+
+/*GRID POR AREAS*/
+
+
+#gridAreas {
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "menu sect1 aside"
+    "menu sect2 aside"
+    "footer footer footer";
+    grid-template-columns: 15% auto 20%;
+    grid-template-rows: 20% auto auto 20%;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+
+}
+
+.menu{
+    grid-area: menu;
+    border: solid 1px;
+    background-color: chartreuse;
+
+
+}
+.head{
+    grid-area: header;
+    border: solid 1px;
+    background-color: chartreuse;
+
+
+}
+
+.sect1 {
+    grid-area: sect1;
+    border: solid 1px;
+    background-color: chartreuse;
+
+}
+
+.sect2{
+    grid-area: sect2;
+    border: solid 1px;
+    background-color: chartreuse;
+
+}
+
+.aside {
+    grid-area: aside;
+    border: solid 1px;
+    background-color: chartreuse;
+
+}
+
+.footer{
+    grid-area: footer;
+    border: solid 1px;
+    background-color: chartreuse;
+
+}
+
+/*Media Queries*/
+
+@media(min-width: 1024px){
+
+}
+@media(min-width: 481px) and (max-width: 1023px){
+    body{
+        background-color: blue;
+        
+
+    }
+    #gridAreas {
+        display: grid;
+        grid-template-areas: 
+        "header header header"
+        "menu menu menu"
+        "sect1 sect1 sect1"
+        "sect2 sect2 sect2"
+        "aside aside aside"
+        "footer footer footer";
+        
+        grid-template-rows: 3fr 1fr 1fr 1fr 1fr 3fr;}
+     
+  
+
+}
+@media (max-width:480px){
+    body{
+        background-color: black;}
+    #gridAreas {
+            display: grid;
+            grid-template-areas: 
+            "header header header"
+            "menu menu menu"
+            "sect1 sect1 sect1"
+            "sect2 sect2 sect2"
+            "aside aside aside"
+            "footer footer footer";
+            
+            grid-template-rows: 3fr 1fr 1fr 1fr 1fr 3fr;}
+        
+    }
+}
