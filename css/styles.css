@@ -22,6 +22,10 @@ body{
 .nav:hover{
     color:blue;
 }
+a{
+    text-decoration: none;
+    
+}
 .flexSect{
     display: flex;
     justify-content: space-between;
@@ -147,4 +151,20 @@ img{
             grid-template-rows: 3fr 1fr 1fr 1fr 1fr 3fr;}
         
     }
+
+#gridInfo{
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "menu sect1 sect1"
+    "menu sect2 sect2"
+    "footer footer footer";
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
+ 
 }
+
+
+
+
+
